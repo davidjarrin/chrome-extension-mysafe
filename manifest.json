@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "MySafe - Senhasegura",
+    "description": "Get your credentials of your personal vault - directly to your sessions",
+    "version": "1.0",
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["/js/contentScript.js"]
+    }],
+    "permissions": ["tabs", "activeTab", "scripting", "storage"],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_popup": "/html/popup.html",
+        "default_icon": "/assets/icons/senhasegura.png"
+    },
+    "icons" : {
+        "128": "/assets/icons/safe-line.png"
+    }
+}
